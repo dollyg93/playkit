@@ -26,7 +26,7 @@ console.log(distDir);
 //   next(err);
 // });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.info(`server started on port 3000`);
 });
 

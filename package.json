@@ -17,8 +17,8 @@
     "format:test": "prettier {src,e2e,cypress}/**/*.{ts,json,md,css} --list-different",
     "analyze": "npm run clean && npm run build:prod -- --stats-json && webpack-bundle-analyzer ./dist/stats.json",
     "compodoc": "compodoc -p src/tsconfig.app.json",
-    "heroku-postbuild": "ng build --prod",
-    "start": "nodemon server.js"
+    "heroku-postbuild": "npm run clean && npm run build:prod",
+    "start": "NODE_ENV=production nodemon server.js"
   },
   "engines": {
     "node": "14.15.4",
