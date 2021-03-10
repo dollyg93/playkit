@@ -13,18 +13,18 @@ app.use('/auth', (req, res) => {
 
 console.log(distDir);
 
-app.use((req, res, next) => {
-  const err = new httpError(404)
-  return next(err);
-});
+// app.use((req, res, next) => {
+//   const err = new httpError(404)
+//   return next(err);
+// });
 
-app.use((err, req, res, next) => {
+// app.use((err, req, res, next) => {
 
-  res.status(err.status || 500).json({
-    message: err.message
-  });
-  next(err);
-});
+//   res.status(err.status || 500).json({
+//     message: err.message
+//   });
+//   next(err);
+// });
 
 app.listen(3000, () => {
     console.info(`server started on port 3000`);
