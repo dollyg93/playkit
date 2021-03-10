@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../fonts/AvenirLTStd-Roman.woff2') format('woff2'),
+        url('../fonts/AvenirLTStd-Roman.woff') format('woff'),
+        url('../fonts/AvenirLTStd-Roman.svg#AvenirLTStd-Roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../fonts/AvenirLTStd-Black.woff2') format('woff2'),
+        url('../fonts/AvenirLTStd-Black.woff') format('woff'),
+        url('../fonts/AvenirLTStd-Black.svg#AvenirLTStd-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../fonts/AvenirLTStd-Book.woff2') format('woff2'),
+        url('../fonts/AvenirLTStd-Book.woff') format('woff'),
+        url('../fonts/AvenirLTStd-Book.svg#AvenirLTStd-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Futura ND for Nike 365 Cn XBd';
+    src: url('../fonts/FuturaNDforNike365Cn-XBd.woff2') format('woff2'),
+        url('../fonts/FuturaNDforNike365Cn-XBd.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('../fonts/FuturaStd-Bold.woff2') format('woff2'),
+        url('../fonts/FuturaStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('../fonts/FuturaStd-CondensedExtraBd.woff2') format('woff2'),
+        url('../fonts/FuturaStd-CondensedExtraBd.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/Futura-CondensedExtraBold.woff2') format('woff2'),
+        url('../fonts/Futura-CondensedExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Condensed BQ';
+    src: url('../fonts/FuturaCondensedBQ-ExtraBoldOutline.woff2') format('woff2'),
+        url('../fonts/FuturaCondensedBQ-ExtraBoldOutline.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura-CondensedExtraBold';
+    src: url('../fonts/Futura-CondExtraBoldObl.woff2') format('woff2'),
+        url('../fonts/Futura-CondExtraBoldObl.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Trade Gothic for Nike 365';
+    src: url('../fonts/TradeGothicforNike365-Roman.woff2') format('woff2'),
+        url('../fonts/TradeGothicforNike365-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trade Gothic for Nike 365 BdCn';
+    src: url('../fonts/TradeGothicforNike365-BdCn.woff2') format('woff2'),
+        url('../fonts/TradeGothicforNike365-BdCn.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trade Gothic for Nike 365';
+    src: url('../fonts/TradeGothicforNike365-Light.woff2') format('woff2'),
+        url('../fonts/TradeGothicforNike365-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
