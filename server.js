@@ -7,7 +7,7 @@ const app = express();
 var distDir = './dist/';
 
 app.use(express.static(path.join(__dirname, distDir)))
-app.use((req, res) => {
+app.use('/auth', (req, res) => {
   res.sendFile(path.join(__dirname, distDir + '/index.html'));
 });
 
@@ -27,7 +27,7 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(3000, () => {
-    console.info(`server started on port 3000)`);
+    console.info(`server started on port 3000`);
 });
 
 module.exports = app;
