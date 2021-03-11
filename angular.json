@@ -42,7 +42,6 @@
             "styles": [
               "src/assets/css/fonts.css",
               "src/assets/css/bootstrap.min.css",
-              "src/assets/css/imageuploadify.min.css",
               "src/styles.css"
             ],
             "stylePreprocessorOptions": {
@@ -52,8 +51,7 @@
             },
             "scripts": [
               "src/assets/js/jquery-3.5.1.min.js",
-              "src/assets/js/bootstrap.min.js",
-              "src/assets/js/imageuploadify.min.js"
+              "src/assets/js/bootstrap.min.js"
             ]
           },
           "configurations": {
