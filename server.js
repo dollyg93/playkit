@@ -7,7 +7,7 @@ const app = express();
 var distDir = './dist/';
 
 app.use(express.static(path.join(__dirname, distDir)))
-app.use('/', (req, res) => {
+app.use('/auth', (req, res) => {
   res.sendFile(path.join(__dirname, distDir + '/index.html'));
 });
 
