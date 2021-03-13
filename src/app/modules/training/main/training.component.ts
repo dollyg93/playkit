@@ -11,7 +11,7 @@ export class TrainingComponent implements OnInit {
 
     ngOnInit() { }
 
-    navigateTo() {
-        this.coreService.navigateToPath('/dashboard/training-tasks');
+    navigateTo(path) {
+        this.coreService.navigateToPath(path);
     }
 }

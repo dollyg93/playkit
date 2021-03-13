@@ -148,12 +148,17 @@ const routes: Routes = [
               import('@modules/training/add-training-task/add-training-task.module').then(m => m.AddTrainingTaskViewModule)
           },
           {
-            path: 'add-task',
+            path: 'training/edit-page',
             loadChildren: () => 
-              import('@modules/task/add/task-add.module').then(m => m.TaskAddModule)
+              import('@modules/training/edit-main/edit-main-training.module').then(m => m.EditMainTrainingModule)
           },
           {
-            path: 'edit-task',
+            path: 'play-it/edit-page',
+            loadChildren: () => 
+              import('@modules/task/edit-main/edit-main-task.module').then(m => m.EditMainTaskModule)
+          },
+          {
+            path: 'play-it/add',
             loadChildren: () => 
               import('@modules/task/add/task-add.module').then(m => m.TaskAddModule)
           }
