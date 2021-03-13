@@ -55,7 +55,7 @@ const routes: Routes = [
           {
             path: 'assess',
             loadChildren: () => 
-              import('@modules/assess/assess.module').then(m => m.AssessModule)
+              import('@modules/assess/main/assess.module').then(m => m.AssessModule)
           },
           {
             path: 'add-class',
@@ -161,6 +161,11 @@ const routes: Routes = [
             path: 'play-it/add',
             loadChildren: () => 
               import('@modules/task/add/task-add.module').then(m => m.TaskAddModule)
+          },
+          {
+            path: 'assess/edit-page',
+            loadChildren: () => 
+              import('@modules/assess/edit-main/edit-main-assess.module').then(m => m.EditMainAssessModule)
           }
         ]
       },
