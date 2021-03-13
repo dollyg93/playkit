@@ -12,9 +12,9 @@ export class NavComponent implements OnInit {
   isIndexPage: boolean;
   navItems = [
     { link: '/dashboard/about', title: 'ABOUT' },
-    { link: '/dashboard', title: 'TRAINING' },
-    { link: '/dashboard', title: 'TASKS' },
-    { link: '/dashboard', title: 'ASSESS'},
+    { link: '/dashboard/training', title: 'TRAINING' },
+    { link: '/dashboard/play-it', title: 'PLAY IT' },
+    { link: '/dashboard/assess', title: 'ASSESS'},
     { link: '/dashboard/groups', title: 'GROUPS' }
   ];
 

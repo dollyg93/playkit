@@ -36,6 +36,9 @@ import { faMediumM, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { ControlMessagesComponent } from './component/control-messages/control-messages.component';
 import { SpinnerComponent } from './component/spinner/spinner.component';
+import { BackButtonComponent } from './component/back-button/back-button.component';
+import { FilterComponent } from './component/filter/filter.component';
+import { ParticipantTableComponent } from './component/participants-table/participant-table.component';
 
 @NgModule({
   imports: [
@@ -47,7 +50,13 @@ import { SpinnerComponent } from './component/spinner/spinner.component';
     NgbModule,
     FontAwesomeModule
   ],
-  declarations: [ControlMessagesComponent, SpinnerComponent],
+  declarations: [
+    ControlMessagesComponent,
+    SpinnerComponent,
+    BackButtonComponent,
+    FilterComponent,
+    ParticipantTableComponent
+  ],
   exports: [
     CommonModule,
     FormsModule,
@@ -59,8 +68,11 @@ import { SpinnerComponent } from './component/spinner/spinner.component';
     NgbModule,
     FontAwesomeModule,
 
+    FilterComponent,
     ControlMessagesComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    BackButtonComponent,
+    ParticipantTableComponent
   ]
 })
 export class SharedModule {

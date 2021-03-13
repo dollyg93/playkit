@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ChildrenOutletContexts } from '@angular/router';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
 import { NoAuthGuard } from '@core/guard/no-auth.guard';
@@ -43,6 +43,21 @@ const routes: Routes = [
               import('@modules/groups/groups.module').then(m => m.GroupsModule)
           },
           {
+            path: 'training',
+            loadChildren: () => 
+              import('@modules/training/main/training.module').then(m => m.TrainingModule)
+          },
+          {
+            path: 'play-it',
+            loadChildren: () => 
+              import('@modules/task/main/task.module').then(m => m.TaskModule)
+          },
+          {
+            path: 'assess',
+            loadChildren: () => 
+              import('@modules/assess/assess.module').then(m => m.AssessModule)
+          },
+          {
             path: 'add-class',
             loadChildren: () =>
               import('@modules/class/add/class-add.module').then(m => m.ClassAddModule)
@@ -50,7 +65,97 @@ const routes: Routes = [
           {
             path: 'edit-class',
             loadChildren: () => 
-              import('@modules/class/edit/class-edit.module').then(m=> m.ClassEditModule)
+              import('@modules/class/add/class-add.module').then(m => m.ClassAddModule)
+          },
+          {
+            path: 'class/:id',
+            loadChildren: () =>
+              import('@modules/class/detail/class-detail.module').then(m => m.ClassDetailModule)
+          },
+          {
+            path: 'users/:id',
+            loadChildren: () => 
+              import('@modules/users/single-detail/user-detail.module').then(m => m.UserDetailModule)
+          },
+          {
+            path: 'users/:id/:userId',
+            loadChildren: () => 
+              import('@modules/users/single-detail/user-detail.module').then(m => m.UserDetailModule)
+          },
+          {
+            path: 'add-user',
+            loadChildren: () =>
+              import('@modules/users/add/user-add.module').then(m => m.UserAddModule)
+          },
+          {
+            path: 'edit-user',
+            loadChildren: () => 
+              import('@modules/users/add/user-add.module').then(m => m.UserAddModule)
+          },
+          {
+            path: 'add-school',
+            loadChildren: () => 
+              import('@modules/school/add/school-add.module').then(m => m.SchoolAddModule)
+          },
+          {
+            path: 'edit-school',
+            loadChildren: () => 
+              import('@modules/school/add/school-add.module').then(m => m.SchoolAddModule)
+          },
+          {
+            path: 'school/:id',
+            loadChildren: () => 
+              import('@modules/school/details/school-details.module').then(m => m.SchoolDetailModule)
+          },
+          {
+            path: 'add-region',
+            loadChildren: () => 
+              import('@modules/regions/add/region-add.module').then(m => m.RegionAddModule)
+          },
+          {
+            path: 'edit-region',
+            loadChildren: () => 
+              import('@modules/regions/add/region-add.module').then(m => m.RegionAddModule)
+          },
+          {
+            path: 'region/:id',
+            loadChildren: () => 
+              import('@modules/regions/details/region-details.module').then(m => m.RegionDetailModule)
+          },
+          {
+            path: 'add-country',
+            loadChildren: () => 
+              import('@modules/country/add/country-add.module').then(m => m.CountryAddModule)
+          },
+          {
+            path: 'edit-country',
+            loadChildren: () => 
+              import('@modules/country/add/country-add.module').then(m => m.CountryAddModule)
+          },
+          {
+            path: 'country/:id',
+            loadChildren: () => 
+              import('@modules/country/details/country-details.module').then(m => m.CountryDetailModule)
+          },
+          {
+            path: 'training-tasks',
+            loadChildren: () => 
+              import('@modules/training/view-training-tasks/training-task.module').then(m => m.TrainingTaskViewModule)
+          },
+          {
+            path: 'training-tasks/add',
+            loadChildren: () => 
+              import('@modules/training/add-training-task/add-training-task.module').then(m => m.AddTrainingTaskViewModule)
+          },
+          {
+            path: 'add-task',
+            loadChildren: () => 
+              import('@modules/task/add/task-add.module').then(m => m.TaskAddModule)
+          },
+          {
+            path: 'edit-task',
+            loadChildren: () => 
+              import('@modules/task/add/task-add.module').then(m => m.TaskAddModule)
           }
         ]
       },
@@ -68,13 +173,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, )
+    RouterModule.forRoot(routes, { enableTracing: true })
   ],
   exports: [RouterModule],
   providers: []
 })
 export class AppRoutingModule {}
-/*
-{
-      relativeLinkResolution: 'legacy'
-    } */

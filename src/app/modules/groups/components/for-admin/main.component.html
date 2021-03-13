@@ -2,90 +2,13 @@
   <div class="row">
     <div class="sec-menu">
       <ul>
-        <li><a href="groups.html" class="active">USERS</a></li>
-        <li><a href="class.html">CLASSES</a></li>
-        <li><a href="schools.html">SCHOOLS</a></li>
-        <li><a href="regions.html">REGIONS</a></li>
-        <li><a href="country.html">COUNTRIES</a></li>
+        <li *ngFor="let item of listElements;" [ngClass]="{'active': item.tabId == tab.tabId}"
+        (click)="tabClicked(item)" ><a>{{item.title}}</a></li>
       </ul>
       <label class="text-left desknone">SELECT GROUP TYPE</label>
       <div class="sec-menu-slct">
-
       </div>
     </div>
-
   </div>
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <a class="main-btn text-center">ADD USER</a>
-    </div>
-  </div>
-
-  <h1>USERS</h1>
-  <div class="row mb-5">
-    <div class="col-md-3"></div>
-    <div class="col-md-6 serch-sec">
-      <div class="input-group">
-        <input type="search" class="form-control rounded" placeholder="Search by" aria-label="Search"
-          aria-describedby="search-addon" />
-        <a href="" class="src-icn"></a>
-      </div>
-      <a href="" class="btn">Reset All</a>
-    </div>
-    <div class="col-md-3"></div>
-  </div>
-  <table class="table table-condensed" style="border-collapse:collapse;">
-    <thead>
-      <tr>
-        <th>NAME</th>
-        <th class="mdnone">ROLE TYPE</th>
-        <th class="mdnone">SCHOOL</th>
-        <th class="mdnone">REGION</th>
-        <th class="mdnone">COUNTRY</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>First, Last Name</td>
-        <td class="mdnone">Role</td>
-        <td class="mdnone">School</td>
-        <td class="mdnone">Region</td>
-        <td class="mdnone">Country</td>
-        <td class="arow-dwn"><a href=""><img src="../../../../../assets/images/arow-right.svg"></a></td>
-      </tr>
-      <tr>
-        <td>First, Last Name</td>
-        <td class="mdnone">Role</td>
-        <td class="mdnone">School</td>
-        <td class="mdnone">Region</td>
-        <td class="mdnone">Country</td>
-        <td class="arow-dwn"><a href=""><img src="../../../../../assets/images/arow-right.svg"></a></td>
-      </tr>
-      <tr>
-        <td>First, Last Name</td>
-        <td class="mdnone">Role</td>
-        <td class="mdnone">School</td>
-        <td class="mdnone">Region</td>
-        <td class="mdnone">Country</td>
-        <td class="arow-dwn"><a href=""><img src="../../../../../assets/images/arow-right.svg"></a></td>
-      </tr>
-      <tr>
-        <td>First, Last Name</td>
-        <td class="mdnone">Role</td>
-        <td class="mdnone">School</td>
-        <td class="mdnone">Region</td>
-        <td class="mdnone">Country</td>
-        <td class="arow-dwn"><a href=""><img src="../../../../../assets/images/arow-right.svg"></a></td>
-      </tr>
-      <tr>
-        <td>First, Last Name</td>
-        <td class="mdnone">Role</td>
-        <td class="mdnone">School</td>
-        <td class="mdnone">Region</td>
-        <td class="mdnone">Country</td>
-        <td class="arow-dwn"><a href=""><img src="../../../../../assets/images/arow-right.svg"></a></td>
-      </tr>
-    </tbody>
-  </table>
+  <router-outlet></router-outlet>
 </div>

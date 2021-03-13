@@ -4,6 +4,7 @@ body{
 }
 a{
   color: #0030a9;
+  cursor: pointer;
 }
 .bg-light{
 	background: #000 !important;

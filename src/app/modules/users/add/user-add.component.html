@@ -1,0 +1,203 @@
+<div class="container">
+    <app-back-button></app-back-button><h1>
+         ADD USER
+    </h1>
+    <div class="col-md-12 Configuration mb-4">
+        <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio12" [checked]="loadView === 1" (change)="loadView= +$event.target.value"
+                name="customRadioew" class="custom-control-input" value='1'>
+            <label class="custom-control-label" for="customRadio12">Single User</label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio13" [checked]="loadView === 2" (change)="loadView= +$event.target.value"
+                name="customRadioew" class="custom-control-input" value='2'>
+            <label class="custom-control-label" for="customRadio13">Multiple Users</label>
+        </div>
+    </div>
+    <form>
+        <div class="row mb-5 mt-3">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Date Added</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Today’s Date">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">SELECT ROLE TYPE</label>
+                    <div id="custom-select">
+                        <select>
+                            <option>Practitioner</option>
+                            <option>Practitioner</option>
+                            <option>Practitioner</option>
+                        </select>
+                    </div>
+                </div>
+                <div *ngIf="loadView == 1">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">First Name</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Enter First Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Last Name</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Enter Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Enter Email Address">
+                    </div>
+                </div>
+                <div *ngIf="loadView == 1">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">SELECT COUNTRY</label>
+                        <div id="custom-select">
+                            <select>
+                                <option>Country Name</option>
+                                <option>Country Name</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">REGION</label>
+                        <div id="custom-select">
+                            <select>
+                                <option>Select or Enter Region </option>
+                                <option>Select or Enter Region </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">SCHOOL</label>
+                        <div id="custom-select">
+                            <select>
+                                <option>Select or Enter School </option>
+                                <option>Select or Enter School </option>
+                                <option>Select or Enter School </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="col-md-12 text-left mob-text-center" *ngIf="loadView == 2">
+        <a class="main-btn-cncel text-center">UPLOAD CSV FILE</a>
+    </div>
+    <table *ngIf="loadView == 2" class="table table-condensed mdnone multi-user" style="border-collapse:collapse;">
+        <thead>
+            <tr>
+                <th class="pl-0 pb-0">NAME</th>
+                <th class="pl-0 pb-0">EMAIL</th>
+                <th class="pl-0 pb-0">SCHOOL</th>
+                <th class="pl-0 pb-0">REZGION</th>
+                <th class="pl-0 pb-0">COUNTRY</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="pl-0 border-0">
+                    <div class="form-group mb-0">
+                        <input type="name" class="form-control" id="exampleFormControlInput1"
+                            placeholder="First/Last Name">
+                    </div>
+                </td>
+                <td class="pl-0 border-0">
+                    <div class="form-group mb-0">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email">
+                    </div>
+                </td>
+                <td class="pl-0 border-0">
+                    <div class="form-group mb-0">
+                        <div id="custom-select">
+                            <select>
+                                <option>Select School</option>
+                                <option>Select School</option>
+                                <option>Select School</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+                <td class="pl-0 border-0">
+                    <div class="form-group mb-0">
+                        <div id="custom-select">
+                            <select>
+                                <option>Select Region</option>
+                                <option>Select Region</option>
+                                <option>Select Region</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+                <td class="pl-0 border-0">
+                    <div class="form-group mb-0">
+                        <div id="custom-select">
+                            <select>
+                                <option>Select Country</option>
+                                <option>Select Country</option>
+                                <option>Select Country</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="pl-0 border-0">
+                    <div class="form-group mb-0">
+                        <input type="name" class="form-control" id="exampleFormControlInput1"
+                            placeholder="First/Last Name">
+                    </div>
+                </td>
+                <td class="pl-0 border-0">
+                    <div class="form-group mb-0">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email">
+                    </div>
+                </td>
+                <td class="pl-0 border-0">
+                    <div class="form-group mb-0">
+                        <div id="custom-select">
+                            <select>
+                                <option>Select School</option>
+                                <option>Select School</option>
+                                <option>Select School</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+                <td class="pl-0 border-0">
+                    <div class="form-group mb-0">
+                        <div id="custom-select">
+                            <select>
+                                <option>Select Region</option>
+                                <option>Select Region</option>
+                                <option>Select Region</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+                <td class="pl-0 border-0">
+                    <div class="form-group mb-0">
+                        <div id="custom-select">
+                            <select>
+                                <option>Select Country</option>
+                                <option>Select Country</option>
+                                <option>Select Country</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row mdnone" *ngIf="loadView == 2">
+        <div class="col-md-12">
+            <a href="" class="ad-anotr">+ add another</a>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-12 text-center">
+            <a class="main-btn-cncel text-center">Cancel</a>
+            <a class="main-btn text-center">Save</a>
+        </div>
+    </div>
+</div>

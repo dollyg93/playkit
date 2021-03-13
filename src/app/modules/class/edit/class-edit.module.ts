@@ -8,6 +8,6 @@ import { ClassEditComponent } from './class-edit.component';
     imports: [ClassEditRoutingModule, SharedModule],
     declarations: [ClassEditComponent]
 })
-export class ClassEditModule { 
+export class ClassEditModule {
 
 }

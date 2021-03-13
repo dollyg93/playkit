@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-back-button></app-back-button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <a class="main-btn-cncel text-center" (click)="deleteClass()" >DELETE CLASS</a>
+      <a class="main-btn text-center" (click)="editClass()">EDIT</a>
+    </div>
+  </div>
+
+  <h1>CLASS NAME</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <p class="usr-detal">Date Added: DD-MM-YYYY</p>
+      <p class="usr-detal mt-5">Practitioner: Name</p>
+      <p class="usr-detal">Country:</p>
+      <p class="usr-detal">Region:</p>
+      <p class="usr-detal">School:</p>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <app-participant-table [list]='[1,2,3,4,5]' ></app-participant-table>
+    </div>
+  </div>
+</div>

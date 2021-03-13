@@ -26,19 +26,11 @@ import { DashboardNavsComponent } from './layout/dashboard-navs/dashboard-navs.c
     DashboardLayoutComponent
   ],
   imports: [
-    // angular
     BrowserModule,
-
-    // 3rd party
     AuthModule,
-
-    // core & shared
     CoreModule,
     SharedModule,
-
-    // app
     AppRoutingModule,
-
     BrowserAnimationsModule
   ],
   providers: [],

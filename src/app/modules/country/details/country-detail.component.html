@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-back-button></app-back-button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <a class="main-btn-cncel text-center" (click)="deleteCountry()" >DELETE COUNTRY</a>
+      <a class="main-btn text-center" (click)="editCountry()" >EDIT</a>
+    </div>
+  </div>
+
+  <h1>COUNTRY NAME</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <p class="usr-detal">Date Added: DD-MM-YYYY</p>
+    </div>
+  </div>
+  <div class="row  mt-5">
+    <div class="col-md-12">
+      <table class="table table-condensed" style="border-collapse:collapse;">
+        <thead>
+          <tr>
+            <th class="pl-0"> CLASS NAME</th>
+            <th class="mdnone">PRACTITIONER</th>
+            <th class="mdnone">SCHOOL</th>
+            <th class="mdnone">REGION</th>
+            <th class="mdnone">COUNTRY</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of [1,2,3,4,5]" >
+            <td>Class Name</td>
+            <td class="mdnone">Name</td>
+            <td class="mdnone">School</td>
+            <td class="mdnone">Region</td>
+            <td class="mdnone">Country</td>
+            <td class="arow-dwn"><a><img src="../../../../assets/images/arow-right.svg"></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

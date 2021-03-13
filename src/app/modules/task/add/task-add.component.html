@@ -1,0 +1,252 @@
+<div class="container">
+    <app-back-button></app-back-button> <h1>CREATE TASK</h1>
+    <form>
+       <div class="row mb-5 mt-3">
+          <div class="col-md-4">                  
+             <div class="form-group">
+                <label for="exampleFormControlInput1">SELECT LANGUAGE</label>
+                <div id="custom-select">
+                   <select>
+                      <option>English</option>
+                      <option>English</option>
+                      <option>English</option>
+                   </select>
+                </div>
+             </div>
+             <div class="form-group">
+                <label for="exampleFormControlInput1">TASK NAME</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Task Name">
+             </div>
+             <div class="form-group">
+                <label for="exampleFormControlInput1">SELECT PHASE NUMBER</label>
+                <div id="custom-select">
+                   <select>
+                      <option>Phase 1</option>
+                      <option>Phase 2</option>
+                      <option>Phase 3</option>
+                   </select>
+                </div>
+             </div>
+             <div class="form-group">
+                <label for="exampleFormControlInput1">SELECT TASK NUMBER</label>
+                <div id="custom-select">
+                   <select>
+                      <option>Task 1</option>
+                      <option>Task 2</option>
+                   </select>
+                </div>
+             </div>
+             <div class="form-group">
+                <label for="exampleFormControlInput1">SELECT MOVEMENT TYPE</label>
+                <div id="custom-select">
+                   <select>
+                      <option>Locomotion</option>
+                      <option>Locomotion</option>
+                   </select>
+                </div>
+             </div>
+             <h2>ASSESS IT DETAILS</h2>
+             <div class="form-group">
+                <label for="exampleFormControlInput1">LOOK FOR THIS MOVEMENT</label>
+                <input type="email" class="form-control mb-3" id="exampleFormControlInput1" placeholder="enter bullet point text">
+                <input type="email" class="form-control mb-3" id="exampleFormControlInput1" placeholder="enter bullet point text">
+                <input type="email" class="form-control mb-3" id="exampleFormControlInput1" placeholder="enter bullet point text">
+                <a class="field-add" href="">+ add another</a>
+             </div>
+
+
+          </div>
+          <div class="col-md-12 Configuration">
+             <h5>DEVELOP THESE STAGES</h5>
+             <table class="table table-bordered table-hover develp-stage">
+               <thead>
+                 <tr>
+                   <th style="border: none;" class="col-md-4"></th>
+                   <th class="col-md-4">1. EMERGING</th>
+                   <th class="col-md-4">2. ‘CAN DO’</th>
+                   <th class="col-md-2">3. ACCOMPLISHED</th>
+                   <th class="col-md-2">4. CONFIDENT</th>
+                   <th class="col-md-2">5. PROFICIENT</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <tr ng-repeat="name in getdrugnameNewArray">
+                   <td class="text-center">HEAD</td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                 </tr>
+                 <tr ng-repeat="name in getdrugnameNewArray">
+                   <td class="text-center">ARMS</td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                 </tr>
+                 <tr ng-repeat="name in getdrugnameNewArray">
+                   <td class="text-center">LEGS</td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                 </tr>
+                 <tr ng-repeat="name in getdrugnameNewArray">
+                   <td class="text-center">BODY</td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                   <td><textarea name="address" rows="3" placeholder="enter text"></textarea></td>
+                 </tr>
+               </tbody>
+             </table>
+           </div>
+             <div class="col-md-12">
+             <h2>ASSETS</h2>
+             <h5>SELECT THE ASSET TYPE AND INCLUDE THE FILE OR LINK</h5>
+             <hr/>
+
+                 <div class="funkyradio">
+                  <div class="funkyradio-primary">
+                      <input type="checkbox" name="checkbox" id="checkbox1" checked/>
+                      <label for="checkbox1">PLAY IT THUMBNAIL</label>
+                  </div>
+                  <div class="funkyradio-primary">
+                      <input type="checkbox" name="checkbox" id="checkbox2"/>
+                      <label for="checkbox2">ASSESS IT THUMBNAIL</label>
+                  </div>
+                  <div class="funkyradio-primary">
+                      <input type="checkbox" name="checkbox" id="checkbox3"/>
+                      <label for="checkbox3">PLAY IT IOD</label>
+                  </div>
+                  <div class="funkyradio-primary">
+                      <input type="checkbox" name="checkbox" id="checkbox4"/>
+                      <label for="checkbox4">ASSESS IT IOD</label>
+                  </div>
+                  <div class="funkyradio-primary">
+                      <input type="checkbox" name="checkbox" id="checkbox5"/>
+                      <label for="checkbox5">ASSESS IT VIDEO</label>
+                  </div>
+                  <div class="funkyradio-primary">
+                      <input type="checkbox" name="checkbox" id="checkbox6"/>
+                      <label for="checkbox6">ACTIVITY CARD</label>
+                  </div>
+              </div>
+              <div class="col-md-12 mt-3 px-0">
+                 <div class="form-group">
+                    <input type="file" class="file-up" accept=".xlsx,.xls,image/*,.doc,audio/*,.docx,video/*,.ppt,.pptx,.txt,.pdf" multiple>
+                 </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="exampleFormControlInput1">Is this asset downloadable?</label>
+                </div>
+                <div class="col-md-6 pl-0">
+                  <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio12" name="customRadioew" class="custom-control-input" checked="">
+                <label class="custom-control-label" for="customRadio12">Yes</label>
+             </div>
+             <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio13" name="customRadioew" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio13">No</label>
+             </div>
+                </div>
+              </div>
+              <hr/>
+
+              <div class="funkyradio">
+                  <div class="funkyradio-primary">
+                      <input type="checkbox" name="checkbox" id="checkbox7" checked/>
+                      <label for="checkbox7">PLAY IT THUMBNAIL</label>
+                  </div>
+                  <div class="funkyradio-primary">
+                      <input type="checkbox" name="checkbox" id="checkbox8"/>
+                      <label for="checkbox8">ASSESS IT THUMBNAIL</label>
+                  </div>
+                  <div class="funkyradio-primary">
+                      <input type="checkbox" name="checkbox" id="checkbox9"/>
+                      <label for="checkbox9">PLAY IT IOD</label>
+                  </div>
+                  <div class="funkyradio-primary">
+                      <input type="checkbox" name="checkbox" id="checkbox10"/>
+                      <label for="checkbox10">ASSESS IT IOD</label>
+                  </div>
+                  <div class="funkyradio-primary">
+                      <input type="checkbox" name="checkbox" id="checkbox11"/>
+                      <label for="checkbox11">ASSESS IT VIDEO</label>
+                  </div>
+                  <div class="funkyradio-primary">
+                      <input type="checkbox" name="checkbox" id="checkbox12"/>
+                      <label for="checkbox12">ACTIVITY CARD</label>
+                  </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <label for="exampleFormControlInput1">Html link</label>
+                  <div class="form-group html-lnk">                         
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Insert link">
+                 </div>
+                </div>
+              </div>
+             
+              <div class="row">
+                <div class="col-md-3">
+                 <label for="exampleFormControlInput1">Is this asset downloadable?</label>
+                </div>
+                <div class="col-md-6 pl-0">
+                  <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio14" name="customRadioeww" class="custom-control-input" checked="">
+                <label class="custom-control-label" for="customRadio14">Yes</label>
+             </div>
+             <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio15" name="customRadioeww" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio15">No</label>
+             </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-12">
+                   <a href="" class="ad-anotr">+ add another asset</a>
+                </div>
+             </div>
+
+             <div class="row">
+                <div class="col-md-12">
+                  <h2>TRY NEXT LINK</h2>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group mb-3">
+                    <label for="exampleFormControlInput1">SELECT TASK LINK (optional)</label>
+                    <div id="custom-select">
+                       <select>
+                          <option>Task Name</option>
+                          <option>Task Name</option>
+                       </select>
+                    </div>
+                 </div>
+                </div>
+              </div>
+
+              <div class="row mt-0">
+                <div class="col-md-12">
+                   <a href="" class="ad-anotr">+ add another</a>
+                </div>
+             </div>
+
+         </div>               
+
+       </div>
+    </form>
+    <div class="row">
+       <div class="col-md-12 text-center">
+          <a class="main-btn-cncel text-center" href="">CANCEL</a>
+          <a class="main-btn text-center" href="create_a_stage_one.html">SAVE</a>
+       </div>
+    </div>
+ </div>
