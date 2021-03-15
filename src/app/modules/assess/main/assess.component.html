@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row mt-4">
         <div class="col-md-12 text-center">
-            <a class="main-btn text-center" (click)="navigateTo()" >EDIT PAGE</a>
+            <a class="main-btn text-center" (click)="navigateTo()">EDIT PAGE</a>
         </div>
     </div>
 
@@ -21,45 +21,82 @@
 
     <div class="row mb-5">
         <div class="col-md-12 mt-5">
-            <a href="#demo" class="cls-name ply-phse text-center" data-toggle="collapse">assess it PHASE 1 <img
-                    src="../../../assets/images/aro-g.svg"></a>
-            <div id="demo" class="collapse my-5">
-                <div class="row">
-                    <div class="col-md-3 text-center">
-                        <img class="img-fluid" src="../../../assets/images/P1-T1-TTime-Assess.png" />
-                        <h2 class="mt-4 p-0">TASK 1</h2>
-                        <h3 class="mt-2">T-Time</h3>
-                        <a class="main-btn-cncel text-center mt-2" href="">DOWNLOAD ACTIVITY CARD</a>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <img class="img-fluid" src="../../../assets/images/P1-T2-Cornerball-Assess.png" />
-                        <h2 class="mt-4 p-0">TASK 2</h2>
-                        <h3 class="mt-2">Cornerball</h3>
-                        <a class="main-btn-cncel text-center mt-2" href="">DOWNLOAD ACTIVITY CARD</a>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <img class="img-fluid" src="../../../assets/images/P1-T3-Raid-Assess.png" />
-                        <h2 class="mt-4 p-0">TASK 3</h2>
-                        <h3 class="mt-2">Raid</h3>
-                        <a class="main-btn-cncel text-center mt-2" href="">DOWNLOAD ACTIVITY CARD</a>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <img class="img-fluid" src="../../../assets/images/P1-T4-SpaceInvaders2V1-Assess.png" />
-                        <h2 class="mt-4 p-0">TASK 4</h2>
-                        <h3 class="mt-2">Space Invaders 1 2v1</h3>
-                        <a class="main-btn-cncel text-center mt-2" href="">DOWNLOAD ACTIVITY CARD</a>
+            <div *ngFor="let item of assessments | keyvalue;">
+                <a href="#{{item.key}}" class="cls-name {{item.value.color}} text-center" data-toggle="collapse">assess it {{item.key}}
+                    <img src="../../../assets/images/aro-g.svg"></a>
+                <div id="{{item.key}}" class="collapse my-5">
+                    <div class="row" >
+                        <div class="col-md-3 text-center" *ngFor="let task of item.value.tasks" >
+                            <img class="img-fluid" [src]="task.img" (click)="showActvityCard(task.id)" />
+                            <h2 class="mt-4 p-0">{{task.task}}</h2>
+                            <h3 class="mt-2">{{task.title}}</h3>
+                            <a class="main-btn-cncel text-center mt-2" [href]="task.img" [download]="task.isDownloadable">DOWNLOAD ACTIVITY CARD</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <a href="#demo1" class="cls-name ply-phse col-mr text-center mt-4" data-toggle="collapse">assess it PHASE 2
-                <img src="../../../assets/images/aro-m.svg"></a>
-            <div id="demo1" class="collapse">
-                Yha
-            </div>
-            <a href="#demo2" class="cls-name ply-phse col-rd text-center mt-4" data-toggle="collapse">assess it PHASE 3
-                <img src="../../../assets/images/aro-r.svg"></a>
-            <div id="demo2" class="collapse">
-                Yha
+                <!-- <a href="#demo1" class="cls-name ply-phse col-mr text-center mt-4" data-toggle="collapse">assess it
+                    PHASE 2
+                    <img src="../../../assets/images/aro-m.svg"></a>
+                <div id="demo1" class="collapse">
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+                            <img class="img-fluid" src="../../../assets/images/P1-T1-TTime-Assess.png" />
+                            <h2 class="mt-4 p-0">TASK 1</h2>
+                            <h3 class="mt-2">T-Time</h3>
+                            <a class="main-btn-cncel text-center mt-2" href="">DOWNLOAD ACTIVITY CARD</a>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <img class="img-fluid" src="../../../assets/images/P1-T2-Cornerball-Assess.png" />
+                            <h2 class="mt-4 p-0">TASK 2</h2>
+                            <h3 class="mt-2">Cornerball</h3>
+                            <a class="main-btn-cncel text-center mt-2" href="">DOWNLOAD ACTIVITY CARD</a>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <img class="img-fluid" src="../../../assets/images/P1-T3-Raid-Assess.png" />
+                            <h2 class="mt-4 p-0">TASK 3</h2>
+                            <h3 class="mt-2">Raid</h3>
+                            <a class="main-btn-cncel text-center mt-2" href="">DOWNLOAD ACTIVITY CARD</a>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <img class="img-fluid" src="../../../assets/images/P1-T4-SpaceInvaders2V1-Assess.png" />
+                            <h2 class="mt-4 p-0">TASK 4</h2>
+                            <h3 class="mt-2">Space Invaders 1 2v1</h3>
+                            <a class="main-btn-cncel text-center mt-2" href="">DOWNLOAD ACTIVITY CARD</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#demo2" class="cls-name ply-phse col-rd text-center mt-4" data-toggle="collapse">assess it
+                    PHASE 3
+                    <img src="../../../assets/images/aro-r.svg"></a>
+                <div id="demo2" class="collapse">
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+                            <img class="img-fluid" src="../../../assets/images/P1-T1-TTime-Assess.png" />
+                            <h2 class="mt-4 p-0">TASK 1</h2>
+                            <h3 class="mt-2">T-Time</h3>
+                            <a class="main-btn-cncel text-center mt-2"
+                                href="../../../assets/images/P1-T1-TTime-Assess.png" download>DOWNLOAD ACTIVITY CARD</a>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <img class="img-fluid" src="../../../assets/images/P1-T2-Cornerball-Assess.png" />
+                            <h2 class="mt-4 p-0">TASK 2</h2>
+                            <h3 class="mt-2">Cornerball</h3>
+                            <a class="main-btn-cncel text-center mt-2" href="">DOWNLOAD ACTIVITY CARD</a>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <img class="img-fluid" src="../../../assets/images/P1-T3-Raid-Assess.png" />
+                            <h2 class="mt-4 p-0">TASK 3</h2>
+                            <h3 class="mt-2">Raid</h3>
+                            <a class="main-btn-cncel text-center mt-2" href="">DOWNLOAD ACTIVITY CARD</a>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <img class="img-fluid" src="../../../assets/images/P1-T4-SpaceInvaders2V1-Assess.png" />
+                            <h2 class="mt-4 p-0">TASK 4</h2>
+                            <h3 class="mt-2">Space Invaders 1 2v1</h3>
+                            <a class="main-btn-cncel text-center mt-2" href="">DOWNLOAD ACTIVITY CARD</a>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>

@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { CoreService } from '@app/core/service/core.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-    selector: 'app-training-tasks',
-    templateUrl: 'training-task.component.html'
+  selector: 'app-training-tasks',
+  templateUrl: 'training-task.component.html'
 })
-
 export class TrainingTaskViewComponent implements OnInit {
-    constructor(private coreService: CoreService) { }
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
-    ngOnInit() { }
+  ngOnInit() {}
 
-    navigateTo() {
-        this.coreService.navigateToPath('dashboard/training-tasks/add');
-    }
+  createTask() {
+    this.router.navigate(['add'], {
+      relativeTo: this.route
+    });
+  }
 }

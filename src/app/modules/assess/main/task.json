@@ -1,0 +1,101 @@
+{
+    "phase 1": {
+        "color": "ply-phse",
+        "tasks": [
+            {
+                "id": "1",
+                "img": "../../../assets/images/P1-T1-TTime-Assess.png",
+                "task": "Task 1",
+                "title": "T-Time",
+                "isDownloadable": true
+            },
+            {
+                "id": "2",
+                "img": "../../../assets/images/P1-T2-Cornerball-Assess.png",
+                "task": "Task 2",
+                "title": "Cornerball",
+                "isDownloadable": true
+            },
+            {
+                "id": "3",
+                "img": "../../../assets/images/P1-T3-Raid-Assess.png",
+                "task": "Task 3",
+                "title": "Raid",
+                "isDownloadable": true
+            },
+            {
+                "id": "4",
+                "img": "../../../assets/images/P1-T4-SpaceInvaders2V1-Assess.png",
+                "task": "Task 4",
+                "title": "Space Invaders 1 2v1",
+                "isDownloadable": true
+            }
+        ]
+    },
+    "phase 2": {
+        "color": "ply-phse col-mr",
+        "tasks": [
+            {
+                "id": "5",
+                "img": "../../../assets/images/P1-T1-TTime-Assess.png",
+                "task": "Task 1",
+                "title": "T-Time",
+                "isDownloadable": true
+            },
+            {
+                "id": "6",
+                "img": "../../../assets/images/P1-T2-Cornerball-Assess.png",
+                "task": "Task 2",
+                "title": "Cornerball",
+                "isDownloadable": true
+            },
+            {
+                "id": "7",
+                "img": "../../../assets/images/P1-T3-Raid-Assess.png",
+                "task": "Task 3",
+                "title": "Raid",
+                "isDownloadable": true
+            },
+            {
+                "id": "8",
+                "img": "../../../assets/images/P1-T4-SpaceInvaders2V1-Assess.png",
+                "task": "Task 4",
+                "title": "Space Invaders 1 2v1",
+                "isDownloadable": true
+            }
+        ]
+    },
+    "phase 3": {
+        "color": "ply-phse col-rd",
+        "tasks": [
+            {
+                "id": "9",
+                "img": "../../../assets/images/P1-T1-TTime-Assess.png",
+                "task": "Task 1",
+                "title": "T-Time",
+                "isDownloadable": true
+            },
+            {
+                "id": "10",
+                "img": "../../../assets/images/P1-T2-Cornerball-Assess.png",
+                "task": "Task 2",
+                "title": "Cornerball",
+                "isDownloadable": true
+            },
+            {
+                "id": "11",
+                "img": "../../../assets/images/P1-T3-Raid-Assess.png",
+                "task": "Task 3",
+                "title": "Raid",
+                "isDownloadable": true
+            },
+            {
+                "id": "12",
+                "img": "../../../assets/images/P1-T4-SpaceInvaders2V1-Assess.png",
+                "task": "Task 4",
+                "title": "Space Invaders 1 2v1",
+                "isDownloadable": true
+            }
+        ]
+    }
+}

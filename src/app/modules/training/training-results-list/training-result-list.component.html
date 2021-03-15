@@ -1,0 +1,22 @@
+<table class="table table-condensed" style="border-collapse:collapse;">
+    <thead>
+        <tr>
+            <th>PARTICIPANT NAME</th>
+            <th class="mdnone">ATTEMPTS</th>
+            <th class="mdnone">COMPLETED</th>
+            <th class="mdnone">%</th>
+            <th class="mdnone">RATING</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of list">
+            <td>First/Last Name</td>
+            <td class="mdnone">#</td>
+            <td class="mdnone">DD-MM-YYYY</td>
+            <td class="mdnone">%</td>
+            <td class="mdnone">RELIABLE</td>
+            <td class="arow-dwn"><a (click)="navigateTo(item)" ><img src="../../../../assets/images/arow-right.svg"></a></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CoreService } from '@app/core/service/core.service';
 
 @Component({
@@ -7,11 +8,15 @@ import { CoreService } from '@app/core/service/core.service';
 })
 
 export class TrainingComponent implements OnInit {
-    constructor(private coreService: CoreService) { }
+    constructor(private coreService: CoreService, private router: Router, private route: ActivatedRoute) { }
 
     ngOnInit() { }
 
     navigateTo(path) {
         this.coreService.navigateToPath(path);
+    }
+
+    beginTraining() {
+        this.router.navigate(['begin'], {relativeTo: this.route})
     }
 }

@@ -54,8 +54,7 @@ import { ParticipantTableComponent } from './component/participants-table/partic
     ControlMessagesComponent,
     SpinnerComponent,
     BackButtonComponent,
-    FilterComponent,
-    ParticipantTableComponent
+    FilterComponent
   ],
   exports: [
     CommonModule,
@@ -67,12 +66,10 @@ import { ParticipantTableComponent } from './component/participants-table/partic
 
     NgbModule,
     FontAwesomeModule,
-
-    FilterComponent,
     ControlMessagesComponent,
     SpinnerComponent,
     BackButtonComponent,
-    ParticipantTableComponent
+    FilterComponent
   ]
 })
 export class SharedModule {

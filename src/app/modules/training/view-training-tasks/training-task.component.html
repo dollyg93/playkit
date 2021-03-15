@@ -1,64 +1,22 @@
 <div class="container">
-    <div class="row mt-5">
-          <div class="col-md-12 text-center">
-             <a class="main-btn text-center" (click)="navigateTo()" >CREATE NEW TASK</a>
-          </div>
-       </div>
-
-      <div class="row">
-        <div class="col-md-12 mt-2">
-          <a href="#demo" class="cls-name text-center tsk-hd" data-toggle="collapse">TRAINING TASKS <img src="../../../../assets/images/aro-blk.svg"></a>
-          <div id="demo" class="collapse">
-            <table class="table table-condensed" style="border-collapse:collapse;">
-              <thead>
-                  <tr>
-                      <th>TRAINING TASK NAME</th>
-                      <th class="mdnone">QUESTIONS</th>
-                      <th class="mdnone">CREATED</th>
-                      <th class="mdnone">PUBLISHED</th>
-                      <th class="mdnone">STATUS</th>
-                      <th></th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr *ngFor="let item of [1,2,3,4,5]" >
-                      <td>Task Name Training-1</td>
-                      <td class="mdnone">#</td>
-                      <td class="mdnone">DD-MM-YYYY</td>
-                      <td class="mdnone">DD-MM-YYYY</td>
-                      <td class="mdnone">ACTIVE</td>
-                      <td class="arow-dwn"><a><img src="../../../../assets/images/arow-right.svg"></a></td>
-                  </tr>
-                </tbody>
-            </table>
-          </div>
-          <a href="#demo1" class="cls-name text-center tsk-hd" data-toggle="collapse">TRAINING RESULTS <img src="../../../../assets/images/aro-blk.svg"></a>
-          <div id="demo1" class="collapse">
-            <table class="table table-condensed" style="border-collapse:collapse;">
-              <thead>
-                  <tr>
-                      <th>PARTICIPANT NAME</th>
-                      <th class="mdnone">ATTEMPTS</th>
-                      <th class="mdnone">COMPLETED</th>
-                      <th class="mdnone">%</th>
-                      <th class="mdnone">RATING</th>
-                      <th></th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr *ngFor="let item of [1,2,3,4,5]" >
-                      <td>First/Last Name</td>
-                      <td class="mdnone">#</td>
-                      <td class="mdnone">DD-MM-YYYY</td>
-                      <td class="mdnone">%</td>
-                      <td class="mdnone">RELIABLE</td>
-                      <td class="arow-dwn"><a><img src="../../../../assets/images/arow-right.svg"></a></td>
-                  </tr>
-                </tbody>
-            </table>
-          </div>
-        </div>
-
-      </div>
-      
+  <div class="row mt-5">
+    <div class="col-md-12 text-center">
+      <a class="main-btn text-center" (click)="createTask()">CREATE NEW TASK</a>
+    </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-12 mt-2">
+      <a href="#demo" class="cls-name text-center tsk-hd" data-toggle="collapse">TRAINING TASKS <img
+          src="../../../../assets/images/aro-blk.svg"></a>
+      <div id="demo" class="collapse">
+        <training-task-list [list]='[1,2,3,4,5]'></training-task-list>
+      </div>
+      <a href="#demo1" class="cls-name text-center tsk-hd" data-toggle="collapse">TRAINING RESULTS <img
+          src="../../../../assets/images/aro-blk.svg"></a>
+      <div id="demo1" class="collapse">
+        <training-result-list [list]='[1,2,3,4,5]' ></training-result-list>
+      </div>
+    </div>
+  </div>
+</div>
